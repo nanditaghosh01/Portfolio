@@ -1,0 +1,33 @@
+{
+  "name": "nandita-ghosh-portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio website for Nandita Ghosh",
+  "main": "server.js",
+  "scripts": {
+    "build": "next build",
+    "start": "next start -p 5173"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "nandita-ghosh"
+  ],
+  "author": "Nandita Ghosh",
+  "license": "MIT",
+  "dependencies": {
+    "lucide-react": "^1.65.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.6.2",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.7.2"
+  }
+}

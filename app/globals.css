@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Additional utility overrides and custom smooth transitions */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  transition: background-color 0.32s ease, color 0.32s ease;
+}
