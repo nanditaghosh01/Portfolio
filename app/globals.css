@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+/* Override Tailwind v4 container restrictions to maintain seamless, fluid, proportional layout */
+.container {
+  width: 100% !important;
+  max-width: var(--container-max, 1200px) !important;
+  margin-inline: auto !important;
+  padding-inline: 1.75rem !important;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 1.25rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-inline: 1rem !important;
+  }
+}
+
 /* Additional utility overrides and custom smooth transitions */
 html {
   scroll-behavior: smooth;

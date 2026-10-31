@@ -1113,8 +1113,8 @@ function initTypewriter() {
   if (!el) return;
 
   const roles = [
-    'Software Engineer',
     'Full-Stack Web Developer',
+    'Software Engineer',
     'AI & ML Enthusiast',
     'Robotics & IoT Builder',
     'Algorithmic Problem Solver'

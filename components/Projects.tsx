@@ -62,7 +62,11 @@ export default function Projects({ onSelectProject }: ProjectsProps) {
         {/* Dynamic Projects Grid */}
         <div className="projects-grid" id="projectsGrid">
           {filteredProjects.map((project) => (
-            <article key={project.id} className="project-card" data-id={project.id}>
+            <article
+              key={project.id}
+              className="project-card"
+              data-id={project.id}
+            >
               {/* Media / Thumbnail */}
               {project.image ? (
                 <div className="project-thumb">

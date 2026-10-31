@@ -119,7 +119,7 @@ export default function Skills() {
         </div>
 
         <div className="skills-grid">
-          {/* Category 1: Web Development (Higher Languages & Frameworks) */}
+          {/* Category 1: Web Development */}
           <div className="skill-category-card">
             <div className="skill-header">
               <div className="skill-header-icon">
@@ -247,4 +247,3 @@ export default function Skills() {
     </section>
   );
 }
-

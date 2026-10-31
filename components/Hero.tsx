@@ -7,37 +7,40 @@ interface HeroProps {
 }
 
 const ROLES = [
-  "Software Engineer",
   "Full-Stack Web Developer",
+  "Software Engineer",
   "React & Next.js Engineer",
   "Robotics & IoT Builder"
 ];
 
 export default function Hero({ onPreviewCv }: HeroProps) {
   const [roleIndex, setRoleIndex] = useState(0);
-  const [text, setText] = useState("");
+  const [text, setText] = useState("Full-Stack Web Developer");
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     const currentRole = ROLES[roleIndex];
-    const typingSpeed = isDeleting ? 45 : 90;
+    let timeout: NodeJS.Timeout;
 
-    const timer = setTimeout(() => {
-      if (!isDeleting && text === currentRole) {
-        setTimeout(() => setIsDeleting(true), 2000);
-      } else if (isDeleting && text === "") {
-        setIsDeleting(false);
-        setRoleIndex((prev) => (prev + 1) % ROLES.length);
-      } else {
+    if (!isDeleting && text === currentRole) {
+      // Pause at full text
+      timeout = setTimeout(() => setIsDeleting(true), 3200);
+    } else if (isDeleting && text === "") {
+      // Switch to next role and start typing
+      setIsDeleting(false);
+      setRoleIndex((prev) => (prev + 1) % ROLES.length);
+    } else {
+      const typingSpeed = isDeleting ? 40 : 85;
+      timeout = setTimeout(() => {
         setText(
           isDeleting
             ? currentRole.substring(0, text.length - 1)
             : currentRole.substring(0, text.length + 1)
         );
-      }
-    }, typingSpeed);
+      }, typingSpeed);
+    }
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timeout);
   }, [text, isDeleting, roleIndex]);
 
   return (
@@ -60,7 +63,7 @@ export default function Hero({ onPreviewCv }: HeroProps) {
               Third-Year Computer Science Student &bull; Aspiring{" "}
               <span className="typing-role-wrap">
                 <span className="typing-role" id="typingRole">
-                  {text || "Software Engineer"}
+                  {text || "Full-Stack Web Developer"}
                 </span>
                 <span className="typing-cursor" aria-hidden="true">
                   |
@@ -187,7 +190,7 @@ export default function Hero({ onPreviewCv }: HeroProps) {
                 />
               </div>
 
-              {/* Single Keyword Badge */}
+              {/* Keyword Badge */}
               <div className="circle-single-badge">
                 <span className="badge-icon-bullet">
                   <svg
@@ -213,4 +216,3 @@ export default function Hero({ onPreviewCv }: HeroProps) {
     </section>
   );
 }
-
