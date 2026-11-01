@@ -131,13 +131,6 @@ export default function Hero({ onPreviewCv }: HeroProps) {
                 onClick={onPreviewCv}
                 aria-label="Preview CV in modal"
                 title="Preview Resume in modal"
-                style={{
-                  borderRadius: "var(--radius-full)",
-                  padding: "0.8rem 1.6rem",
-                  gap: "0.55rem",
-                  fontSize: "0.96rem",
-                  fontWeight: 700,
-                }}
               >
                 <svg
                   width="17"

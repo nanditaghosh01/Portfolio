@@ -58,6 +58,22 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileMenuOpen(false);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [mobileMenuOpen]);
+
   const toggleTheme = () => {
     const nextTheme = theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
@@ -86,7 +102,7 @@ export default function Navbar() {
 
           {/* Navigation Links */}
           <nav aria-label="Main Navigation">
-            <ul className={`nav-links ${mobileMenuOpen ? "active" : ""}`} id="primaryNav">
+            <ul className={`nav-links ${mobileMenuOpen ? "open active" : ""}`} id="primaryNav">
               {NAV_LINKS.map((link) => (
                 <li key={link.name}>
                   <a
@@ -94,10 +110,34 @@ export default function Navbar() {
                     className={`nav-link ${activeSection === link.href.substring(1) ? "active" : ""}`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {link.name}
+                    <span>{link.name}</span>
+                    <svg
+                      className="mobile-nav-arrow"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
                   </a>
                 </li>
               ))}
+              <li className="mobile-drawer-cta">
+                <a
+                  href="#contact"
+                  className="btn btn-primary"
+                  style={{ width: "100%", justifyContent: "center" }}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span>Get in Touch</span>
+                </a>
+              </li>
             </ul>
           </nav>
 
@@ -163,6 +203,11 @@ export default function Navbar() {
           </div>
         </div>
       </header>
+      <div
+        className={`mobile-nav-backdrop ${mobileMenuOpen ? "active" : ""}`}
+        onClick={() => setMobileMenuOpen(false)}
+        aria-hidden="true"
+      />
     </>
   );
 }
