@@ -167,6 +167,8 @@ export default function Skills() {
               <span className="skill-tag">Python</span>
               <span className="skill-tag">C</span>
               <span className="skill-tag">Java</span>
+              <span className="skill-tag">SQL</span>
+              <span className="skill-tag">Bash &amp; Shell</span>
             </div>
           </div>
 
@@ -217,6 +219,8 @@ export default function Skills() {
               <span className="skill-tag">Microcontroller Programming</span>
               <span className="skill-tag">Sensor Integration</span>
               <span className="skill-tag">GPIO Interfacing</span>
+              <span className="skill-tag">Embedded C/C++</span>
+              <span className="skill-tag">Hardware Telemetry</span>
             </div>
           </div>
 

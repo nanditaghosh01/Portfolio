@@ -1161,21 +1161,31 @@ section[id] {
 
 .tools-capsule-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  gap: 1.25rem;
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+  gap: 1.15rem;
+  align-items: stretch;
+}
+
+@media (min-width: 1024px) {
+  .tools-capsule-grid {
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1rem;
+  }
 }
 
 .tool-capsule-card {
   background: var(--color-surface-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
-  padding: 1.85rem 1rem;
+  padding: 1.65rem 0.65rem 1.35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
+  height: 100%;
+  min-height: 180px;
+  box-sizing: border-box;
   transition: all var(--transition-normal);
   cursor: default;
 }
@@ -1188,8 +1198,8 @@ section[id] {
 }
 
 .tool-icon-circle {
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -1199,6 +1209,7 @@ section[id] {
   justify-content: center;
   color: var(--color-primary);
   margin-bottom: 0.85rem;
+  flex-shrink: 0;
   transition: all var(--transition-fast);
 }
 
@@ -1210,19 +1221,36 @@ section[id] {
 }
 
 .tool-name {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: var(--color-white);
-  margin-bottom: 0.25rem;
+  min-height: 2.65em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.25;
+  margin-bottom: 0.65rem;
+  width: 100%;
 }
 
 .tool-role-tag {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: var(--color-primary);
   background: var(--color-gold-light);
-  padding: 0.2rem 0.65rem;
+  padding: 0.25rem 0.55rem;
   border-radius: var(--radius-full);
+  min-height: 2.25em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.2;
+  margin-top: auto;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /* --- About Section --- */
@@ -1871,7 +1899,7 @@ section[id] {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.75rem;
 }
 
@@ -3473,7 +3501,7 @@ section[id] {
   }
 
   .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -3885,28 +3913,36 @@ section[id] {
     text-align: center;
   }
 
-  /* Tools Strip (Clean 2x3 Grid on Mobile) */
+  /* Tools Strip (Clean 3x3 Grid on Mobile) */
   .tools-capsule-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.65rem;
+    align-items: stretch;
   }
 
   .tool-capsule-card {
-    padding: 1.25rem 0.6rem;
+    padding: 1.15rem 0.35rem 1rem;
     border-radius: var(--radius-lg);
+    height: 100%;
+    min-height: 165px;
   }
 
   .tool-icon-circle {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.6rem;
   }
 
-  .tool-capsule-card h4 {
-    font-size: 0.9rem;
+  .tool-name {
+    font-size: 0.82rem;
+    min-height: 2.5em;
+    margin-bottom: 0.45rem;
   }
 
-  .tool-capsule-card p {
-    font-size: 0.75rem;
+  .tool-role-tag {
+    font-size: 0.66rem;
+    padding: 0.18rem 0.35rem;
+    min-height: 2.1em;
   }
 
   /* Projects Filter Pills */
