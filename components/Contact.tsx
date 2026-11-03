@@ -64,36 +64,6 @@ export default function Contact() {
 
   return (
     <>
-      {/* Collaboration Banner */}
-      <section className="work-together-banner-section" aria-label="Collaboration Invitation">
-        <div className="container">
-          <div className="work-together-wrap">
-            <div className="work-together-content">
-              <span className="section-label" style={{ marginBottom: "0.6rem" }}>
-                — Open for Opportunities
-              </span>
-              <h2>Let’s Build Something Meaningful Together</h2>
-              <p>
-                Looking for a motivated software engineering intern, a frontend developer for modern React &amp; Next.js applications,
-                or a curious collaborator for IoT hardware? I&apos;d love to connect.
-              </p>
-            </div>
-            <div className="work-together-action">
-              <a href="#contact" className="btn btn-primary">
-                <span>Get in Touch</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </a>
-              <span className="work-together-note">
-                Barasat, West Bengal &bull; Active &amp; Responsive
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Main Contact Section */}
       <section className="contact-section" id="contact">
         <div className="container">
@@ -101,8 +71,7 @@ export default function Contact() {
             <span className="section-label">Say Hello</span>
             <h2 className="section-title">Let’s Connect &amp; Collaborate</h2>
             <p className="section-subtitle">
-              Whether you&apos;re hiring for software engineering internships, want to collaborate on a full-stack Next.js project,
-              or just want to chat about tech—my inbox is always open.
+              Open for internship opportunities, project collaborations, and software engineering roles.
             </p>
           </div>
 
@@ -111,7 +80,7 @@ export default function Contact() {
             <div className="contact-info-panel">
               <h3 className="contact-headline">Reach Out Directly</h3>
               <p className="contact-intro">
-                Feel free to drop a message through the form or ping me directly on any channel below—I usually respond within a day!
+                Feel free to send a message or connect directly through any channel below.
               </p>
 
               <div className="contact-items-stack">
@@ -260,7 +229,7 @@ export default function Contact() {
                 Send a Message
               </h3>
               <p style={{ fontSize: "0.9rem", color: "var(--color-silver-muted)", marginBottom: "1.75rem" }}>
-                Have a question or proposal? Drop a note below!
+                Send a message and I'll get back to you promptly.
               </p>
 
               <form onSubmit={handleSubmit} noValidate>

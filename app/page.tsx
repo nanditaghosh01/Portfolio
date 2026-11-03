@@ -14,6 +14,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import ProjectModal from "../components/ProjectModal";
 import CvPreviewModal from "../components/CvPreviewModal";
+import ClientEffects from "../components/ClientEffects";
 import { Project } from "../data/projects";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
 
   return (
     <>
+      <ClientEffects />
       <Navbar />
 
       <main id="mainContent">

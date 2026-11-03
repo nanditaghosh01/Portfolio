@@ -6,7 +6,7 @@ export default function Education() {
           <span className="section-label">Academic Path</span>
           <h2 className="section-title">Education</h2>
           <p className="section-subtitle">
-            Where I&apos;m studying and the engineering foundations I&apos;m building on.
+            Academic credentials and engineering coursework.
           </p>
         </div>
 
@@ -56,9 +56,9 @@ export default function Education() {
               <div className="edu-cgpa-box">
                 <span className="cgpa-score">8.98</span>
                 <div className="cgpa-label">
-                  Approximate Cumulative Grade Point Average (CGPA)
+                  Cumulative Grade Point Average (CGPA)
                   <span style={{ display: "block", fontSize: "0.78rem", color: "var(--color-primary)", fontWeight: 600, marginTop: "0.2rem" }}>
-                    Sem 1: 8.45 &bull; Sem 2: 9.15 &bull; Sem 3: 8.87 &bull; Sem 4: 9.45 SGPA
+                    Current SGPA: 8.98 average (Sem 1–4)
                   </span>
                 </div>
               </div>
@@ -69,13 +69,13 @@ export default function Education() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
-                <span>Core Computer Science: Data Structures, Algorithms, Object-Oriented Programming, and Database Systems.</span>
+                <span>Core CS: Data Structures, Algorithms, Object-Oriented Programming, Database Systems.</span>
               </li>
               <li>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
-                <span>Modern Web &amp; Systems: Full-stack Next.js and React architectures, TypeScript, IoT sensor telemetry, and machine learning fundamentals.</span>
+                <span>Systems &amp; Web: Full-stack Next.js and React architectures, TypeScript, and IoT telemetry.</span>
               </li>
             </ul>
           </div>
@@ -90,7 +90,7 @@ export default function Education() {
                 West Bengal Council of Higher Secondary Education (WBCHSE)
               </p>
               <p style={{ fontSize: "0.85rem", color: "var(--color-silver-muted)", marginTop: "0.5rem" }}>
-                Completed science stream with Mathematics, Physics, Chemistry, and Computer Applications—which solidified my passion for coding.
+                Science stream: Mathematics, Physics, Chemistry, and Computer Applications.
               </p>
             </div>
 
@@ -102,7 +102,7 @@ export default function Education() {
                 West Bengal Board of Secondary Education (WBBSE)
               </p>
               <p style={{ fontSize: "0.85rem", color: "var(--color-silver-muted)", marginTop: "0.5rem" }}>
-                Completed with distinction in Mathematics and Science, building the analytical mindset that drives my engineering work today.
+                General Science &amp; Mathematics with distinction.
               </p>
             </div>
           </div>

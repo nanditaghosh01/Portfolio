@@ -8,18 +8,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..900&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --primary: #C2755E;
-      --primary-dark: #935542;
-      --primary-hover: #D4846D;
-      --primary-light: rgba(194, 117, 94, 0.16);
-      --bg: #1C1C19;
-      --card-bg: #2A2A25;
-      --navy: #151513;
-      --text: #FAF5F2;
-      --muted: rgba(245, 235, 230, 0.78);
-      --subtle: rgba(245, 235, 230, 0.55);
-      --border: rgba(194, 117, 94, 0.3);
+        :root,
+    [data-theme="dark"] {
+      --primary: #d29f22;
+      --primary-dark: #5d0018;
+      --primary-hover: #FFFBF4;
+      --primary-light: rgba(210, 159, 34, 0.16);
+      --bg: #000000;
+      --card-bg: #19171b;
+      --navy: #000000;
+      --text: #FFFBF4;
+      --muted: rgba(255, 251, 244, 0.76);
+      --subtle: rgba(255, 251, 244, 0.5);
+      --border: rgba(210, 159, 34, 0.22);
+    }
+    [data-theme="light"] {
+      --primary: #565449;
+      --primary-dark: #11120D;
+      --primary-hover: #1A1A17;
+      --primary-light: rgba(86, 84, 73, 0.12);
+      --bg: #FFFBF4;
+      --card-bg: #FFFFFF;
+      --navy: #F6EFE3;
+      --text: #11120D;
+      --muted: #4E4C41;
+      --subtle: #757262;
+      --border: rgba(86, 84, 73, 0.2);
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -27,7 +41,7 @@
       text-rendering: optimizeLegibility;
       font-feature-settings: 'cv02' 1, 'cv03' 1, 'cv04' 1, 'cv11' 1;
       background: var(--bg);
-      background-image: radial-gradient(circle at 20% 15%, #2A2A25 0%, transparent 50%), radial-gradient(circle at 85% 75%, rgba(194, 117, 94, 0.15) 0%, transparent 45%);
+      background-image: radial-gradient(circle at 20% 15%, #2A2A25 0%, transparent 50%), radial-gradient(circle at 85% 75%, rgba(216, 207, 188, 0.15) 0%, transparent 45%);
       color: var(--text);
       line-height: 1.6;
       padding: 2.5rem 1.5rem;
@@ -68,7 +82,7 @@
       font-weight: 700;
       font-size: 0.875rem;
       cursor: pointer;
-      box-shadow: 0 4px 14px rgba(194, 117, 94, 0.35);
+      box-shadow: 0 4px 14px rgba(210, 159, 34, 0.35);
       transition: all 0.2s ease;
       text-decoration: none;
       display: inline-flex;
@@ -78,7 +92,7 @@
     .btn-action:hover {
       background: #D4846D;
       transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(194, 117, 94, 0.5);
+      box-shadow: 0 6px 18px rgba(216, 207, 188, 0.5);
     }
     .btn-action.btn-secondary {
       background: rgba(42, 42, 37, 0.8);
@@ -127,7 +141,7 @@
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 3.5rem 3.25rem;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(194, 117, 94, 0.15);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(216, 207, 188, 0.15);
     }
     .pdf-embed-wrapper {
       max-width: 860px;
@@ -137,7 +151,7 @@
       overflow: hidden;
       border: 1px solid var(--border);
       box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
-      background: #1C1C19;
+      background: #11120D;
       display: none;
     }
     .pdf-embed-wrapper.active {
@@ -219,7 +233,7 @@
       font-size: 0.78rem;
       font-weight: 700;
       color: var(--primary);
-      background: rgba(194, 117, 94, 0.15);
+      background: rgba(216, 207, 188, 0.15);
       border: 1px solid var(--border);
       padding: 0.15rem 0.55rem;
       border-radius: 4px;
@@ -240,7 +254,7 @@
       flex-wrap: wrap;
       gap: 0.75rem 1.25rem;
       background: rgba(21, 21, 19, 0.7);
-      border: 1px solid rgba(194, 117, 94, 0.28);
+      border: 1px solid rgba(216, 207, 188, 0.28);
       border-radius: 8px;
       padding: 0.65rem 1rem;
       margin-top: 0.5rem;
@@ -308,6 +322,14 @@
       .pdf-embed-wrapper { height: 500px; border-radius: 16px; }
     }
   </style>
+  <script>
+    try {
+      var saved = localStorage.getItem('portfolio-theme') || localStorage.getItem('portfolio_theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    } catch(e) {}
+  </script>
 </head>
 <body>
 
@@ -386,6 +408,17 @@
         <div class="entry-sub">EssProm Academy</div>
         <p class="entry-desc">
           – Implemented a project management tool for time and resource tracking, streamlining task allocation and progress monitoring for the team.
+        </p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>3D Printing Internship</span>
+          <span style="color: var(--primary);">Jun 2026 – Jul 2026</span>
+        </div>
+        <div class="entry-sub">Adamas Robotics &amp; AI Club</div>
+        <p class="entry-desc">
+          – Practical 3D printing and additive manufacturing for robotics prototyping.
         </p>
       </div>
 

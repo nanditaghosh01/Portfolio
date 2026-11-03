@@ -1,139 +1,160 @@
 /* ==========================================================================
    Nandita Ghosh — Developer Portfolio
-   Theme: "Terracotta, Warm Linen & Forest Noir" (Eliana Studio Palette)
+   Theme: "Gold & Wine Noir" (Noguchi Design Selection)
    Palette:
-     - Terracotta:       #935542 (RGB: 147, 85, 66) — Signature CTA buttons, active accents
-     - Terracotta Light: #C2755E (RGB: 194, 117, 94) — Dark mode primary accent & glow
-     - Warm Linen:       #F5EBE6 (RGB: 245, 235, 230) — Light mode soft blush canvas
-     - Forest Noir:      #1C1C19 (RGB: 28, 28, 25) — Deep dark mode canvas & espresso text
-     - Sand Rose:        #E6CEC4 (RGB: 230, 206, 196) — Pill highlights & subtle cards
-     - Warm Gold:        #E6B959 (RGB: 230, 185, 89) — Warm amber star ratings & glows
+     - Midnight Noir:   #19171b (RGB: 25, 23, 27) — Deep midnight surface & card base
+     - Radiant Gold:    #d29f22 (RGB: 210, 159, 34) — Primary luxury gold accent & buttons
+     - Slate Graphite:  #252628 (RGB: 37, 38, 40) — Secondary card surfaces, borders & chips
+     - Crimson Wine:    #5d0018 (RGB: 93, 0, 24) — Deep rich burgundy wine accent & glows
+     - True Black:      #000000 (RGB: 0, 0, 0) — Deepest contrast black canvas
    ========================================================================== */
 
 /* --- Theme Variables --- */
 :root,
 [data-theme="dark"] {
   /* Palette Tokens */
-  --color-terracotta: #935542;
-  --color-terracotta-light: #C2755E;
-  --color-linen: #F5EBE6;
-  --color-espresso: #1C1C19;
-  --color-sand: #E6CEC4;
-  --color-gold-accent: #E6B959;
+  --color-noir: #19171b;
+  --color-gold-base: #d29f22;
+  --color-slate: #252628;
+  --color-wine: #5d0018;
 
-  /* Aliases & Component Scales */
-  --color-black: #1C1C19;
-  --color-navy: #2A2A25;
-  --color-navy-dark: #151513;
-  --color-navy-card: #2A2A25;
-  --color-navy-elevated: #363630;
-  --color-gold: #C2755E;
-  --color-gold-hover: #D4846D;
-  --color-gold-light: rgba(194, 117, 94, 0.16);
-  --color-gold-ultralight: rgba(194, 117, 94, 0.08);
-  --color-gold-border: rgba(194, 117, 94, 0.35);
-  --color-gold-glow: rgba(194, 117, 94, 0.38);
-  --color-silver: #F5EBE6;
-  --color-silver-muted: rgba(245, 235, 230, 0.78);
-  --color-white: #FAF5F2;
+  --color-smoky-black: #000000;
+  --color-olive-drab: #252628;
+  --color-bone: #d29f22;
+  --color-floral-white: #FFFFFF;
+
+  /* Aliases & Legacy Token Compatibility */
+  --color-terracotta: #5d0018;
+  --color-terracotta-light: #d29f22;
+  --color-linen: #FFFFFF;
+  --color-espresso: #000000;
+  --color-sand: #d29f22;
+  --color-gold-accent: #d29f22;
+
+  /* Component Scales */
+  --color-black: #000000;
+  --color-navy: #19171b;
+  --color-navy-dark: #000000;
+  --color-navy-card: #19171b;
+  --color-navy-elevated: #252628;
+  --color-gold: #d29f22;
+  --color-gold-hover: #e5b238;
+  --color-gold-light: rgba(210, 159, 34, 0.14);
+  --color-gold-ultralight: rgba(210, 159, 34, 0.06);
+  --color-gold-border: rgba(210, 159, 34, 0.28);
+  --color-gold-glow: rgba(210, 159, 34, 0.35);
+  --color-silver: #FFFFFF;
+  --color-silver-muted: rgba(255, 255, 255, 0.74);
+  --color-white: #FFFFFF;
 
   /* Semantic Mappings */
-  --color-primary: #C2755E;
-  --color-primary-dark: #935542;
-  --color-primary-hover: #D4846D;
-  --color-primary-light: rgba(194, 117, 94, 0.16);
-  --color-bg-base: #1C1C19;
-  --color-bg-secondary: #151513;
-  --color-surface: #2A2A25;
-  --color-surface-hover: #363630;
-  --color-surface-card: #2A2A25;
-  --color-text-main: #FAF5F2;
-  --color-text-muted: rgba(245, 235, 230, 0.78);
-  --color-text-subtle: rgba(245, 235, 230, 0.55);
-  --color-border: rgba(194, 117, 94, 0.22);
-  --color-border-hover: rgba(194, 117, 94, 0.55);
+  --color-primary: #d29f22;
+  --color-primary-dark: #5d0018;
+  --color-primary-hover: #e5b238;
+  --color-primary-light: rgba(210, 159, 34, 0.14);
+  --color-secondary-accent: #5d0018;
+  --color-bg-base: #000000;
+  --color-bg-secondary: #131215;
+  --color-surface: #19171b;
+  --color-surface-hover: #252628;
+  --color-surface-card: #19171b;
+  --color-text-main: #FFFFFF;
+  --color-text-muted: rgba(255, 255, 255, 0.74);
+  --color-text-subtle: rgba(255, 255, 255, 0.48);
+  --color-border: rgba(210, 159, 34, 0.22);
+  --color-border-hover: rgba(210, 159, 34, 0.6);
 
-  --header-bg: rgba(28, 28, 25, 0.88);
-  --header-bg-scrolled: rgba(21, 21, 19, 0.96);
-  --btn-primary-text: #FFFFFF;
-  --btn-primary-bg: #935542;
-  --btn-primary-hover: #A65D48;
-  --badge-bg: rgba(42, 42, 37, 0.85);
-  --badge-text: #C2755E;
-  --badge-border: rgba(194, 117, 94, 0.35);
-  --circle-border: #FAF5F2;
-  --fanning-badge-bg: rgba(42, 42, 37, 0.95);
-  --fanning-badge-text: #FAF5F2;
+  --header-bg: rgba(0, 0, 0, 0.88);
+  --header-bg-scrolled: rgba(19, 18, 21, 0.96);
+  --btn-primary-text: #19171b;
+  --btn-primary-bg: #d29f22;
+  --btn-primary-hover: #e5b238;
+  --badge-bg: rgba(93, 0, 24, 0.35);
+  --badge-text: #d29f22;
+  --badge-border: rgba(93, 0, 24, 0.7);
+  --circle-border: #d29f22;
+  --fanning-badge-bg: rgba(25, 23, 27, 0.96);
+  --fanning-badge-text: #FFFFFF;
 
-  --shadow-subtle: 0 4px 24px rgba(0, 0, 0, 0.65);
-  --shadow-card: 0 12px 36px -10px rgba(10, 10, 8, 0.8), 0 0 0 1px rgba(194, 117, 94, 0.14);
-  --shadow-hover: 0 24px 50px -10px rgba(194, 117, 94, 0.25), 0 0 0 1.5px rgba(194, 117, 94, 0.5);
-  --shadow-circle: 0 25px 60px -15px rgba(194, 117, 94, 0.35), 0 0 0 3px rgba(194, 117, 94, 0.35);
+  --shadow-subtle: 0 4px 24px rgba(0, 0, 0, 0.85);
+  --shadow-card: 0 12px 36px -10px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(210, 159, 34, 0.15);
+  --shadow-hover: 0 24px 50px -10px rgba(0, 0, 0, 0.9), 0 0 0 1.5px rgba(210, 159, 34, 0.55);
+  --shadow-circle: 0 25px 60px -15px rgba(210, 159, 34, 0.25), 0 0 0 3px rgba(210, 159, 34, 0.35);
 
-  --bg-radial-1: rgba(147, 85, 66, 0.35);
-  --bg-radial-2: rgba(230, 185, 89, 0.12);
+  --bg-radial-1: rgba(93, 0, 24, 0.32);
+  --bg-radial-2: rgba(210, 159, 34, 0.12);
 }
 
-/* Light Mode: Warm Linen Canvas, Crisp White Cards with Terracotta & Espresso Accents */
+/* Light Mode: Elegant Canvas with Midnight Noir, Gold & Wine Accents */
 [data-theme="light"] {
-  --color-terracotta: #935542;
-  --color-terracotta-light: #C2755E;
-  --color-linen: #F5EBE6;
-  --color-espresso: #1C1C19;
-  --color-sand: #E6CEC4;
-  --color-gold-accent: #E6B959;
+  --color-noir: #19171b;
+  --color-gold-base: #d29f22;
+  --color-slate: #252628;
+  --color-wine: #5d0018;
 
-  --color-gold: #935542;
-  --color-gold-hover: #7D4233;
-  --color-gold-light: rgba(147, 85, 66, 0.12);
-  --color-gold-ultralight: rgba(147, 85, 66, 0.06);
-  --color-gold-border: rgba(147, 85, 66, 0.25);
-  --color-gold-glow: rgba(147, 85, 66, 0.25);
+  --color-smoky-black: #000000;
+  --color-olive-drab: #252628;
+  --color-bone: #d29f22;
+  --color-floral-white: #FFFFFF;
 
-  --color-black: #1C1C19;
-  --color-navy: #F5EBE6;
-  --color-navy-dark: #EDE2DC;
+  --color-terracotta: #5d0018;
+  --color-terracotta-light: #801229;
+  --color-linen: #FFFFFF;
+  --color-espresso: #19171b;
+  --color-sand: #d29f22;
+  --color-gold-accent: #d29f22;
+
+  --color-gold: #b38210;
+  --color-gold-hover: #966b0a;
+  --color-gold-light: rgba(210, 159, 34, 0.12);
+  --color-gold-ultralight: rgba(210, 159, 34, 0.05);
+  --color-gold-border: rgba(210, 159, 34, 0.25);
+  --color-gold-glow: rgba(210, 159, 34, 0.2);
+
+  --color-black: #19171b;
+  --color-navy: #F7F5F0;
+  --color-navy-dark: #EFECE5;
   --color-navy-card: #FFFFFF;
   --color-navy-elevated: #FFFFFF;
-  --color-silver: #2E2A27;
-  --color-silver-muted: #5D5550;
-  --color-white: #24201E;
-  /* Deep contrast headings */
+  --color-silver: #19171b;
+  --color-silver-muted: #524f56;
+  --color-white: #19171b;
 
-  --color-primary: #935542;
-  --color-primary-dark: #7A4333;
-  --color-primary-hover: #7D4233;
-  --color-primary-light: rgba(147, 85, 66, 0.12);
-  --color-bg-base: #F5EBE6;
-  --color-bg-secondary: #EDE2DC;
+  --color-primary: #b38210;
+  --color-primary-dark: #19171b;
+  --color-primary-hover: #966b0a;
+  --color-primary-light: rgba(210, 159, 34, 0.12);
+  --color-secondary-accent: #5d0018;
+  --color-bg-base: #FAF8F4;
+  --color-bg-secondary: #F2EEE6;
   --color-surface: #FFFFFF;
-  --color-surface-hover: #FAF5F2;
+  --color-surface-hover: #F8F5EE;
   --color-surface-card: #FFFFFF;
-  --color-text-main: #2E2A27;
-  --color-text-muted: #5D5550;
-  --color-text-subtle: #7A716B;
-  --color-border: rgba(147, 85, 66, 0.18);
-  --color-border-hover: rgba(147, 85, 66, 0.45);
+  --color-text-main: #19171b;
+  --color-text-muted: #524f56;
+  --color-text-subtle: #79767e;
+  --color-border: rgba(37, 38, 40, 0.15);
+  --color-border-hover: rgba(210, 159, 34, 0.5);
 
-  --header-bg: rgba(245, 235, 230, 0.92);
+  --header-bg: rgba(250, 248, 244, 0.94);
   --header-bg-scrolled: rgba(255, 255, 255, 0.98);
   --btn-primary-text: #FFFFFF;
-  --btn-primary-bg: #935542;
-  --btn-primary-hover: #7D4233;
-  --badge-bg: #F5EBE6;
-  --badge-text: #935542;
-  --badge-border: rgba(147, 85, 66, 0.25);
-  --circle-border: #FFFFFF;
+  --btn-primary-bg: #19171b;
+  --btn-primary-hover: #5d0018;
+  --badge-bg: rgba(93, 0, 24, 0.08);
+  --badge-text: #5d0018;
+  --badge-border: rgba(93, 0, 24, 0.3);
+  --circle-border: #d29f22;
   --fanning-badge-bg: rgba(255, 255, 255, 0.96);
-  --fanning-badge-text: #24201E;
+  --fanning-badge-text: #19171b;
 
-  --shadow-subtle: 0 4px 20px rgba(46, 42, 39, 0.05);
-  --shadow-card: 0 10px 30px -10px rgba(46, 42, 39, 0.08), 0 0 0 1px rgba(147, 85, 66, 0.08);
-  --shadow-hover: 0 20px 40px -10px rgba(147, 85, 66, 0.2), 0 0 0 1.5px rgba(147, 85, 66, 0.35);
-  --shadow-circle: 0 20px 50px -12px rgba(147, 85, 66, 0.25), 0 0 0 3px rgba(147, 85, 66, 0.2);
+  --shadow-subtle: 0 4px 20px rgba(25, 23, 27, 0.05);
+  --shadow-card: 0 10px 30px -10px rgba(25, 23, 27, 0.08), 0 0 0 1px rgba(37, 38, 40, 0.08);
+  --shadow-hover: 0 20px 40px -10px rgba(25, 23, 27, 0.14), 0 0 0 1.5px rgba(210, 159, 34, 0.4);
+  --shadow-circle: 0 20px 50px -12px rgba(210, 159, 34, 0.22), 0 0 0 3px rgba(210, 159, 34, 0.25);
 
-  --bg-radial-1: rgba(147, 85, 66, 0.12);
-  --bg-radial-2: rgba(230, 185, 89, 0.08);
+  --bg-radial-1: rgba(93, 0, 24, 0.08);
+  --bg-radial-2: rgba(210, 159, 34, 0.1);
 }
 
 /* Common Tokens */
@@ -303,7 +324,7 @@ textarea {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #FAF5F2 0%, #C2755E 30%, #E6B959 60%, #FAF5F2 100%);
+  background: linear-gradient(135deg, #FAF5F2 0%, #d29f22 30%, #E6B959 60%, #FAF5F2 100%);
   background-size: 250% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -314,7 +335,7 @@ textarea {
 }
 
 [data-theme="light"] .gradient-text {
-  background: linear-gradient(135deg, #24201E 0%, #935542 35%, #C2755E 65%, #24201E 100%);
+  background: linear-gradient(135deg, #24201E 0%, #d29f22 35%, #d29f22 65%, #24201E 100%);
   background-size: 250% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -550,7 +571,8 @@ section[id] {
   pointer-events: auto;
 }
 
-.mobile-drawer-cta {
+.mobile-drawer-cta,
+.mobile-drawer-theme {
   display: none;
 }
 
@@ -776,13 +798,15 @@ section[id] {
 /* --- Hero Section --- */
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--navbar-height));
+  margin-top: var(--navbar-height);
   display: flex;
   align-items: center;
-  padding-top: calc(var(--navbar-height) + 1.25rem);
-  padding-bottom: 1.5rem;
+  justify-content: center;
+  padding-block: 1rem;
   overflow: hidden;
   box-sizing: border-box;
+  scroll-margin-top: 0;
 }
 
 .hero-grid {
@@ -936,10 +960,11 @@ section[id] {
   letter-spacing: -0.01em;
 }
 
-/* --- Hero Right: Circular Portrait with Single Badge --- */
+/* --- Hero Right: Box Portrait with Name & Role Caption --- */
 .hero-right {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   animation: heroScaleIn 0.85s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -983,8 +1008,9 @@ section[id] {
 
 .circle-portrait-wrapper {
   position: relative;
-  width: clamp(290px, 26vw, 380px);
-  height: clamp(290px, 26vw, 380px);
+  width: clamp(280px, 25vw, 360px);
+  height: auto;
+  aspect-ratio: 1 / 1.1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -992,7 +1018,6 @@ section[id] {
 }
 
 @keyframes portrait-float {
-
   0%,
   100% {
     transform: translateY(0);
@@ -1005,10 +1030,10 @@ section[id] {
 
 .circle-glow-halo {
   position: absolute;
-  width: 114%;
-  height: 114%;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--color-gold-glow) 0%, transparent 75%);
+  width: 108%;
+  height: 108%;
+  border-radius: 28px;
+  background: radial-gradient(circle, rgba(93, 0, 24, 0.45) 0%, rgba(210, 159, 34, 0.28) 50%, transparent 80%);
   filter: blur(28px);
   z-index: 0;
   animation: glow-pulse 6s infinite alternate ease-in-out;
@@ -1016,13 +1041,13 @@ section[id] {
 
 .circle-orbit-ring {
   position: absolute;
-  width: 115%;
-  height: 115%;
-  border-radius: 50%;
-  border: 2px dashed var(--color-gold-border);
+  width: 106%;
+  height: 106%;
+  border-radius: 26px;
+  border: 1.5px dashed var(--color-gold-border);
   z-index: 1;
-  animation: rotate-orbit 35s linear infinite;
   pointer-events: none;
+  opacity: 0.65;
 }
 
 @keyframes glow-pulse {
@@ -1051,24 +1076,70 @@ section[id] {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 22px;
   overflow: hidden;
-  border: 6px solid var(--circle-border);
-  box-shadow: var(--shadow-circle);
+  border: 3px solid var(--color-gold-base);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.9),
+              0 0 30px rgba(93, 0, 24, 0.4),
+              0 0 0 1px rgba(210, 159, 34, 0.4);
   z-index: 2;
   background-color: var(--color-surface);
-  transition: transform var(--transition-normal);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .circle-portrait-frame:hover {
   transform: scale(1.02);
+  border-color: #e5b238;
+  box-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.95),
+              0 0 40px rgba(93, 0, 24, 0.55),
+              0 0 0 1.5px #d29f22;
 }
 
 .circle-portrait-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 18%;
+  border-radius: 19px;
+  display: block;
   transition: transform var(--transition-normal);
+}
+
+/* Portrait Caption under Box Image (matches reference layout) */
+.portrait-caption {
+  margin-top: 1.15rem;
+  width: 100%;
+  max-width: clamp(280px, 25vw, 360px);
+  text-align: left;
+  padding-left: 0.25rem;
+  animation: heroFadeUp 0.75s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.portrait-caption-name {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin-bottom: 0.25rem;
+}
+
+[data-theme="light"] .portrait-caption-name {
+  color: var(--color-noir);
+}
+
+.portrait-caption-role {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-silver-muted);
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+}
+
+[data-theme="light"] .portrait-caption-role {
+  color: var(--color-text-muted);
 }
 
 /* Single Suitable Keyword Badge (Leaves the Portrait 100% Clear & Unobstructed) */
@@ -1132,7 +1203,7 @@ section[id] {
   padding-block: 4rem 4.5rem;
   background-color: transparent;
   border-top: none;
-  border-bottom: 1px solid rgba(194, 117, 94, 0.12);
+  border-bottom: 1px solid rgba(210, 159, 34, 0.12);
   position: relative;
   z-index: 1;
 }
@@ -2782,11 +2853,11 @@ section[id] {
   left: 0;
   height: 3.5px;
   width: 0%;
-  background: linear-gradient(90deg, #935542 0%, #C2755E 50%, #E6B959 100%);
+  background: linear-gradient(90deg, #d29f22 0%, #d29f22 50%, #E6B959 100%);
   z-index: 10001;
   pointer-events: none;
   transition: width 0.08s ease-out;
-  box-shadow: 0 0 12px rgba(194, 117, 94, 0.8), 0 0 24px rgba(230, 185, 89, 0.4);
+  box-shadow: 0 0 12px rgba(210, 159, 34, 0.8), 0 0 24px rgba(210, 159, 34, 0.4);
 }
 
 /* 2. Ambient Particle Canvas */
@@ -3080,7 +3151,7 @@ section[id] {
   inset: 0;
   border-radius: inherit;
   background: radial-gradient(400px circle at var(--mouse-x, -1000px) var(--mouse-y, -1000px),
-                             rgba(194, 117, 94, 0.16),
+                             rgba(210, 159, 34, 0.16),
                              transparent 75%);
   pointer-events: none;
   opacity: 0;
@@ -3228,7 +3299,7 @@ section[id] {
 
 /* 11. Timeline Nodes & Connector Track */
 .timeline::before {
-  background: linear-gradient(180deg, var(--color-primary) 0%, rgba(194, 117, 94, 0.35) 75%, transparent 100%);
+  background: linear-gradient(180deg, var(--color-primary) 0%, rgba(210, 159, 34, 0.35) 75%, transparent 100%);
 }
 
 .timeline-dot {
@@ -3326,7 +3397,7 @@ section[id] {
 
 .work-together-wrap:hover {
   transform: translateY(-5px);
-  box-shadow: 0 24px 60px -15px rgba(194, 117, 94, 0.35);
+  box-shadow: 0 24px 60px -15px rgba(210, 159, 34, 0.35);
 }
 
 /* 15. Back to Top Button Entrance & Idle Float */
@@ -3471,8 +3542,9 @@ section[id] {
   }
 
   .circle-portrait-wrapper {
-    width: 330px;
-    height: 330px;
+    width: 310px;
+    height: auto;
+    aspect-ratio: 1 / 1.1;
   }
 
   .about-grid {
@@ -3621,9 +3693,9 @@ section[id] {
 
   /* Hero Section */
   .hero-section {
-    min-height: 100vh;
-    padding-top: calc(var(--navbar-height) + 2.5rem);
-    padding-bottom: 2.75rem;
+    min-height: calc(100vh - var(--navbar-height));
+    margin-top: var(--navbar-height);
+    padding-block: 1.5rem;
   }
 
   .hero-grid {
@@ -3656,7 +3728,14 @@ section[id] {
 
   .circle-portrait-wrapper {
     width: 250px;
-    height: 250px;
+    height: auto;
+    aspect-ratio: 1 / 1.1;
+  }
+
+  .portrait-caption {
+    text-align: center;
+    padding-left: 0;
+    margin-top: 0.95rem;
   }
 
   .circle-single-badge {
@@ -3901,7 +3980,8 @@ section[id] {
   /* Portrait */
   .circle-portrait-wrapper {
     width: 220px;
-    height: 220px;
+    height: auto;
+    aspect-ratio: 1 / 1.1;
   }
 
   .circle-single-badge {
@@ -4104,7 +4184,8 @@ section[id] {
 
   .circle-portrait-wrapper {
     width: 190px;
-    height: 190px;
+    height: auto;
+    aspect-ratio: 1 / 1.1;
   }
 
   .circle-single-badge {
@@ -4130,9 +4211,9 @@ section[id] {
 /* --- Compact Height Viewports (Keeps elements bold and attractive while fitting viewport) --- */
 @media (max-height: 680px) and (min-width: 769px) {
   .hero-section {
-    min-height: 100vh;
-    padding-top: calc(var(--navbar-height) + 0.85rem);
-    padding-bottom: 1rem;
+    min-height: calc(100vh - var(--navbar-height));
+    margin-top: var(--navbar-height);
+    padding-block: 0.75rem;
   }
 
   .hero-tagline-bar {
@@ -4185,7 +4266,8 @@ section[id] {
 
   .circle-portrait-wrapper {
     width: clamp(270px, 24vw, 330px);
-    height: clamp(270px, 24vw, 330px);
+    height: auto;
+    aspect-ratio: 1 / 1.1;
   }
 
   .circle-single-badge {
@@ -4197,9 +4279,9 @@ section[id] {
 
 @media (max-height: 560px) and (min-width: 769px) {
   .hero-section {
-    min-height: 100vh;
-    padding-top: calc(var(--navbar-height) + 0.5rem);
-    padding-bottom: 0.75rem;
+    min-height: calc(100vh - var(--navbar-height));
+    margin-top: var(--navbar-height);
+    padding-block: 0.5rem;
   }
 
   .hero-headline {
@@ -4238,7 +4320,8 @@ section[id] {
 
   .circle-portrait-wrapper {
     width: 210px;
-    height: 210px;
+    height: auto;
+    aspect-ratio: 1 / 1.1;
   }
 }
 
@@ -4272,4 +4355,128 @@ section[id] {
   .status-dot::after {
     animation: none !important;
   }
+}
+
+/* ==========================================================================
+   Crimson Wine (#5d0018) & Radiant Gold (#d29f22) Distinctive Signatures
+   ========================================================================== */
+
+/* Gradient text with Crimson Wine and Radiant Gold blend */
+.gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #d29f22 35%, #e8bc52 65%, #5d0018 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .gradient-text {
+  background: linear-gradient(135deg, #19171b 0%, #b38210 40%, #5d0018 80%, #19171b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Section labels & badges styled with Wine background and Gold border */
+.section-label,
+.badge,
+.hero-badge,
+.section-tag {
+  background: var(--badge-bg) !important;
+  color: var(--badge-text) !important;
+  border: 1px solid var(--badge-border) !important;
+  box-shadow: 0 2px 12px rgba(93, 0, 24, 0.25);
+}
+
+/* Tool capsule cards: Wine tag and wine hover glow */
+.tool-role-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #e5b238 !important;
+  background: rgba(93, 0, 24, 0.48) !important;
+  border: 1px solid rgba(93, 0, 24, 0.75) !important;
+  padding: 0.25rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+.tool-capsule-card:hover {
+  border-color: #5d0018 !important;
+  box-shadow: 0 12px 30px -8px rgba(93, 0, 24, 0.45), 0 0 0 1.5px #d29f22 !important;
+}
+
+.tool-capsule-card:hover .tool-icon-circle {
+  transform: scale(1.12) rotate(6deg);
+  background-color: var(--color-primary);
+  color: #19171b;
+  border-color: #5d0018;
+  box-shadow: 0 0 16px rgba(93, 0, 24, 0.6);
+}
+
+/* Projects filter bar: Active filter pill with Crimson Wine & Gold gradient */
+.filter-btn.active {
+  background: linear-gradient(135deg, #5d0018 0%, #7e0c27 50%, #d29f22 100%) !important;
+  color: #FFFFFF !important;
+  border-color: #d29f22 !important;
+  box-shadow: 0 4px 18px rgba(93, 0, 24, 0.55) !important;
+}
+
+.filter-btn:hover:not(.active) {
+  border-color: #5d0018;
+  color: #d29f22;
+}
+
+/* Project category badge in cards */
+.project-category-badge {
+  background: rgba(93, 0, 24, 0.75) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(210, 159, 34, 0.6) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* Project card hover accents */
+.project-card:hover {
+  border-color: #d29f22 !important;
+  box-shadow: 0 16px 40px -10px rgba(93, 0, 24, 0.35), 0 0 0 1.5px rgba(210, 159, 34, 0.45) !important;
+}
+
+/* Outline button hover with wine gradient */
+.btn-outline:hover,
+.cv-preview-btn:hover {
+  background: linear-gradient(135deg, rgba(93, 0, 24, 0.65) 0%, rgba(37, 38, 40, 0.85) 100%) !important;
+  border-color: #d29f22 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 22px rgba(93, 0, 24, 0.45) !important;
+}
+
+/* Skills tags hover */
+.skill-tag:hover {
+  background-color: #5d0018 !important;
+  color: #FFFFFF !important;
+  border-color: #d29f22 !important;
+  box-shadow: 0 6px 20px rgba(93, 0, 24, 0.55) !important;
+}
+
+/* Timeline track and connector dots */
+.timeline::before {
+  background: linear-gradient(180deg, #d29f22 0%, #5d0018 70%, transparent 100%) !important;
+}
+
+.timeline-dot {
+  background-color: #5d0018 !important;
+  border: 3px solid #d29f22 !important;
+  box-shadow: 0 0 12px rgba(93, 0, 24, 0.6) !important;
+}
+
+/* Portrait aura with Crimson Wine & Gold */
+.circle-glow-halo,
+.hero-portrait-frame::before {
+  background: radial-gradient(circle, rgba(93, 0, 24, 0.72) 0%, rgba(210, 159, 34, 0.38) 45%, transparent 75%) !important;
+  border-radius: 28px !important;
+}
+
+/* Scroll progress bar */
+.scroll-progress-bar {
+  background: linear-gradient(90deg, #5d0018 0%, #d29f22 50%, #e8bc52 100%) !important;
+}
+
+/* Pulse indicator ring */
+.status-indicator-dot::after {
+  border: 1.5px solid #5d0018 !important;
 }

@@ -171,7 +171,7 @@ export default function CvPreviewModal({ isOpen, onClose }: CvPreviewModalProps)
                 borderRadius: "var(--radius-md)",
                 overflow: "hidden",
                 border: "1px solid var(--color-border)",
-                background: "#0a0e1a",
+                background: "var(--color-bg-base)",
               }}
             >
               <iframe

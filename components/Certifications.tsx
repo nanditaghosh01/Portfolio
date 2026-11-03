@@ -29,7 +29,7 @@ export default function Certifications() {
                 <h4>Basics of Python</h4>
                 <span className="cert-issuer">Infosys Springboard</span>
                 <p style={{ fontSize: "0.85rem", color: "var(--color-silver-muted)", marginTop: "0.25rem" }}>
-                  Core Python programming constructs, functional modules, and computational logic.
+                  Python syntax, functional programming, and data structures.
                 </p>
               </div>
             </div>
@@ -46,7 +46,7 @@ export default function Certifications() {
                 <h4>Web Development &amp; AI Workshop</h4>
                 <span className="cert-issuer">Kshitij, IIT Kharagpur</span>
                 <p style={{ fontSize: "0.85rem", color: "var(--color-silver-muted)", marginTop: "0.25rem" }}>
-                  Intensive technical workshop exploring modern web architecture and artificial intelligence integration.
+                  Modern web architecture and artificial intelligence integration.
                 </p>
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function Certifications() {
               Languages
             </h3>
             <p style={{ fontSize: "0.875rem", color: "var(--color-silver-muted)" }}>
-              Communication proficiencies for collaborative teamwork.
+              Communication proficiencies.
             </p>
 
             <div className="lang-list">

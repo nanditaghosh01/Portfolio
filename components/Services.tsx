@@ -6,8 +6,7 @@ export default function Services() {
           <span className="section-label">Capabilities</span>
           <h2 className="section-title">What I Can Bring to Your Team</h2>
           <p className="section-subtitle">
-            I&apos;m early in my engineering journey, which means I bring fresh energy, strong computer science fundamentals,
-            and genuine excitement to write clean, maintainable code in React, Next.js, and TypeScript.
+            Core engineering capabilities across modern web development, software logic, and hardware prototyping.
           </p>
         </div>
 
@@ -23,7 +22,7 @@ export default function Services() {
             </div>
             <h3 className="service-title">Modern Web &amp; Frontend</h3>
             <p className="service-lead">
-              Building clean, fast, mobile-first websites and web applications with Next.js (App Router), React 19, TypeScript, and modern Tailwind CSS styling.
+              Responsive, mobile-first web applications built with Next.js, React, and modern Tailwind CSS.
             </p>
             <ul className="service-features-list">
               <li>
@@ -32,7 +31,7 @@ export default function Services() {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </span>
-                <span>Type-safe Next.js &amp; React component hierarchies</span>
+                <span>Type-safe Next.js &amp; React architecture</span>
               </li>
               <li>
                 <span className="service-check-icon">
@@ -40,7 +39,7 @@ export default function Services() {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </span>
-                <span>Modern Tailwind CSS &amp; responsive layouts</span>
+                <span>Responsive Tailwind CSS layouts</span>
               </li>
               <li>
                 <span className="service-check-icon">
@@ -48,7 +47,7 @@ export default function Services() {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </span>
-                <span>Accessible, smooth user interactions &amp; animations</span>
+                <span>Interactive UI animations &amp; state management</span>
               </li>
               <li>
                 <span className="service-check-icon">
@@ -56,12 +55,9 @@ export default function Services() {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </span>
-                <span>Vercel &amp; GitHub automated deployment workflows</span>
+                <span>Automated deployment workflows (Vercel &amp; Git)</span>
               </li>
             </ul>
-            <p className="service-footnote">
-              Ideal for intern teams, portfolio sites, and frontend feature delivery.
-            </p>
           </div>
 
           {/* Service 2: Software Development & Algorithms */}
@@ -74,7 +70,7 @@ export default function Services() {
             </div>
             <h3 className="service-title">Software &amp; Algorithms</h3>
             <p className="service-lead">
-              Developing structured programming solutions and application logic with a strong focus on algorithmic efficiency, clean code organization, and practical utility.
+              Application logic and computational solutions with a focus on algorithmic efficiency and clean structure.
             </p>
             <ul className="service-features-list">
               <li>
@@ -83,7 +79,7 @@ export default function Services() {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </span>
-                <span>TypeScript, JavaScript, C++, and Python problem-solving</span>
+                <span>Problem-solving in C++, Python, and TypeScript</span>
               </li>
               <li>
                 <span className="service-check-icon">
@@ -91,7 +87,7 @@ export default function Services() {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </span>
-                <span>Core data structures (Trees, Graphs, Queues, Hash Tables)</span>
+                <span>Core data structures &amp; algorithmic optimization</span>
               </li>
               <li>
                 <span className="service-check-icon">
@@ -99,7 +95,7 @@ export default function Services() {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </span>
-                <span>API integration &amp; asynchronous data streaming</span>
+                <span>RESTful API integration &amp; data processing</span>
               </li>
               <li>
                 <span className="service-check-icon">
@@ -107,12 +103,9 @@ export default function Services() {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </span>
-                <span>Object-oriented design &amp; relational database queries</span>
+                <span>Object-oriented design &amp; relational SQL</span>
               </li>
             </ul>
-            <p className="service-footnote">
-              Focused on clear modular code and well-tested algorithmic prototypes.
-            </p>
           </div>
 
           {/* Service 3: IoT & Hardware Prototyping */}
@@ -129,7 +122,7 @@ export default function Services() {
             </div>
             <h3 className="service-title">IoT &amp; Hardware Prototyping</h3>
             <p className="service-lead">
-              Bridging the gap between software and the physical world with microcontroller programming, sensor integration, and telemetry.
+              Embedded systems and microcontroller solutions bridging software with physical hardware.
             </p>
             <ul className="service-features-list">
               <li>
@@ -146,7 +139,7 @@ export default function Services() {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </span>
-                <span>Sensor integration (IMU, Ultrasonic, GPS, Dust)</span>
+                <span>Sensor integration (IMU, Ultrasonic, GPS)</span>
               </li>
               <li>
                 <span className="service-check-icon">
@@ -162,12 +155,9 @@ export default function Services() {
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
                 </span>
-                <span>Low-cost BOM engineering &amp; prototyping</span>
+                <span>Rapid breadboard prototyping &amp; telemetry</span>
               </li>
             </ul>
-            <p className="service-footnote">
-              Hands-on physical computing from breadboard to functional build.
-            </p>
           </div>
         </div>
       </div>

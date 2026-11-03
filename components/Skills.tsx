@@ -6,7 +6,7 @@ export default function Skills() {
           <span className="section-label">Skills &amp; Competencies</span>
           <h2 className="section-title">Technical Toolkit</h2>
           <p className="section-subtitle">
-            A practical overview of my core programming languages, modern web frameworks, developer tools, and engineering foundations.
+            Core programming languages, modern web frameworks, and developer tools.
           </p>
         </div>
 

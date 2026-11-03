@@ -6,42 +6,25 @@ interface HeroProps {
   onPreviewCv: () => void;
 }
 
-const ROLES = [
-  "Full-Stack Web Developer",
-  "Software Engineer",
-  "React & Next.js Engineer",
-  "Robotics & IoT Builder"
-];
-
 export default function Hero({ onPreviewCv }: HeroProps) {
-  const [roleIndex, setRoleIndex] = useState(0);
-  const [text, setText] = useState("Full-Stack Web Developer");
-  const [isDeleting, setIsDeleting] = useState(false);
+  // 3D Parallax tilt on portrait
+  const [tilt, setTilt] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    const currentRole = ROLES[roleIndex];
-    let timeout: NodeJS.Timeout;
+  const handlePortraitMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const deltaX = (e.clientX - centerX) / (rect.width / 2);
+    const deltaY = (e.clientY - centerY) / (rect.height / 2);
+    setTilt({
+      x: deltaY * -5,
+      y: deltaX * 5,
+    });
+  };
 
-    if (!isDeleting && text === currentRole) {
-      // Pause at full text
-      timeout = setTimeout(() => setIsDeleting(true), 3200);
-    } else if (isDeleting && text === "") {
-      // Switch to next role and start typing
-      setIsDeleting(false);
-      setRoleIndex((prev) => (prev + 1) % ROLES.length);
-    } else {
-      const typingSpeed = isDeleting ? 40 : 85;
-      timeout = setTimeout(() => {
-        setText(
-          isDeleting
-            ? currentRole.substring(0, text.length - 1)
-            : currentRole.substring(0, text.length + 1)
-        );
-      }, typingSpeed);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [text, isDeleting, roleIndex]);
+  const handlePortraitLeave = () => {
+    setTilt({ x: 0, y: 0 });
+  };
 
   return (
     <section className="hero-section" id="home">
@@ -54,28 +37,16 @@ export default function Hero({ onPreviewCv }: HeroProps) {
               <span>Computer Science &bull; Adamas University</span>
             </div>
 
-            <h1 className="hero-headline">
-              Turning curiosity into{" "}
-              <span className="gradient-text">code that actually works</span>
+            <h1 className="hero-headline hero-name-title">
+              Nandita <span className="gradient-text">Ghosh</span>
             </h1>
 
             <p className="hero-subheadline">
-              Third-Year Computer Science Student &bull; Aspiring{" "}
-              <span className="typing-role-wrap">
-                <span className="typing-role" id="typingRole">
-                  {text || "Full-Stack Web Developer"}
-                </span>
-                <span className="typing-cursor" aria-hidden="true">
-                  |
-                </span>
-              </span>
+              Third-Year Computer Science Student
             </p>
 
             <p className="hero-bio">
-              Hey, glad you&apos;re here! I&apos;m an engineering student who loves building things from scratch—whether that&apos;s
-              crafting clean, responsive web applications with Next.js, React, and TypeScript, solving algorithmic puzzles in C++,
-              or wiring up sensors on an Arduino breadboard at our robotics club. I&apos;m happiest when tackling real problems and shipping code
-              that feels great to use.
+              Computer Science undergraduate building clean, responsive web applications with Next.js, React, and TypeScript, with a strong foundation in algorithms and IoT hardware.
             </p>
 
             <div className="hero-actions-row">
@@ -123,12 +94,12 @@ export default function Hero({ onPreviewCv }: HeroProps) {
             {/* Quick Metrics */}
             <div className="hero-metrics">
               <div className="metric-item">
-                <span className="metric-value">8.98</span>
+                <span className="metric-value">9.45</span>
                 <span className="metric-label">Current CGPA (Adamas Univ)</span>
               </div>
               <div className="metric-item">
                 <span className="metric-value">12+</span>
-                <span className="metric-label">Projects & Prototypes</span>
+                <span className="metric-label">Projects &amp; Prototypes</span>
               </div>
               <div className="metric-item">
                 <span className="metric-value">2028</span>
@@ -137,42 +108,40 @@ export default function Hero({ onPreviewCv }: HeroProps) {
             </div>
           </div>
 
-          {/* Right Column: CLEAR Photo Portrait */}
+          {/* Right Column: Photo Portrait Box with Caption */}
           <div className="hero-right">
-            <div className="circle-portrait-wrapper">
+            <div
+              className="circle-portrait-wrapper"
+              onMouseMove={handlePortraitMove}
+              onMouseLeave={handlePortraitLeave}
+              style={{
+                transform:
+                  tilt.x !== 0 || tilt.y !== 0
+                    ? `perspective(800px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) translateY(-4px)`
+                    : undefined,
+                transition:
+                  tilt.x === 0 && tilt.y === 0 ? "transform 0.45s ease-out" : "none",
+              }}
+            >
               {/* Ambient Glow & Orbital Dash Ring */}
               <div className="circle-glow-halo" aria-hidden="true"></div>
               <div className="circle-orbit-ring" aria-hidden="true"></div>
 
-              {/* Main Circular Frame */}
+              {/* Main Box Frame */}
               <div className="circle-portrait-frame">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/assets/images/profile.png"
-                  alt="Portrait illustration of Nandita Ghosh"
+                  alt="Portrait of Nandita Ghosh"
                   className="circle-portrait-img"
                 />
               </div>
+            </div>
 
-              {/* Keyword Badge */}
-              <div className="circle-single-badge">
-                <span className="badge-icon-bullet">
-                  <svg
-                    width="13"
-                    height="13"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="16 18 22 12 16 6"></polyline>
-                    <polyline points="8 6 2 12 8 18"></polyline>
-                  </svg>
-                </span>
-                <span>Software Engineer</span>
-              </div>
+            {/* Caption under Image (Matches user reference) */}
+            <div className="portrait-caption">
+              <h3 className="portrait-caption-name">Nandita Ghosh</h3>
+              <p className="portrait-caption-role">CSE Student &bull; Web Developer &bull; IoT Builder</p>
             </div>
           </div>
         </div>
