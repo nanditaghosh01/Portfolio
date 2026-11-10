@@ -3,9 +3,9 @@ import "./globals.css";
 import "../assets/css/styles.css";
 
 export const metadata: Metadata = {
-  title: "Nandita Ghosh — CSE Student • Web Developer • IoT Builder",
-  description:
-    "Portfolio of Nandita Ghosh — B.Tech Computer Science student building clean, responsive web applications with Next.js, React, and TypeScript, alongside IoT hardware prototypes.",
+  metadataBase: new URL("https://portfolio-aosd-fawn.vercel.app"),
+  title: "Nandita Ghosh — Developer & Engineer",
+  description: "Nandita Ghosh — CSE student, web developer, and IoT builder",
   keywords: [
     "Nandita Ghosh",
     "Portfolio",
@@ -31,31 +31,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Nandita Ghosh Portfolio",
+    siteName: "Nandita Ghosh",
     title: "Nandita Ghosh — Developer & Engineer",
-    description:
-      "Nandita Ghosh — CSE student, web developer, and IoT builder at Adamas University.",
+    description: "Nandita Ghosh — CSE student, web developer, and IoT builder",
     images: [
       {
-        url: "/og-square.png",
+        url: "/og-image.png",
         width: 512,
         height: 512,
         alt: "Nandita Ghosh 'N' Logo",
-      },
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Nandita Ghosh Portfolio Social Preview",
       },
     ],
   },
   twitter: {
     card: "summary",
     title: "Nandita Ghosh — Developer & Engineer",
-    description:
-      "Nandita Ghosh — CSE student, web developer, and IoT builder at Adamas University.",
-    images: ["/og-square.png"],
+    description: "Nandita Ghosh — CSE student, web developer, and IoT builder",
+    images: ["/og-image.png"],
   },
 };
 
