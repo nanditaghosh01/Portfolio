@@ -110,7 +110,7 @@ export default function Navbar() {
               height="30"
               style={{ borderRadius: "7px", boxShadow: "0 2px 10px rgba(210, 159, 34, 0.35)" }}
             />
-            <span className="brand-text">Nandita Ghosh</span>
+            <span className="brand-text">N.G.</span>
           </a>
 
           {/* Navigation Links */}
