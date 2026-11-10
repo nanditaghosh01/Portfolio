@@ -69,13 +69,23 @@ export default function Projects({ onSelectProject }: ProjectsProps) {
             >
               {/* Media / Thumbnail */}
               {project.image ? (
-                <div className="project-thumb">
+                <div
+                  className="project-thumb"
+                  onClick={() => onSelectProject(project)}
+                  style={{ cursor: "pointer" }}
+                  title="Click to view project details"
+                >
                   <span className="project-category-badge">{project.categoryLabel}</span>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src={project.image} alt={project.title} loading="lazy" />
                 </div>
               ) : (
-                <div className="project-thumb" style={{ background: project.imageGradient }}>
+                <div
+                  className="project-thumb"
+                  style={{ background: project.imageGradient, cursor: "pointer" }}
+                  onClick={() => onSelectProject(project)}
+                  title="Click to view project details"
+                >
                   <span className="project-category-badge">{project.categoryLabel}</span>
                   <div className="project-thumb-fallback">
                     <svg
@@ -99,7 +109,14 @@ export default function Projects({ onSelectProject }: ProjectsProps) {
               )}
 
               <div className="project-body">
-                <h3 className="project-title">{project.title}</h3>
+                <h3
+                  className="project-title"
+                  onClick={() => onSelectProject(project)}
+                  style={{ cursor: "pointer" }}
+                  title="Click to view details"
+                >
+                  {project.title}
+                </h3>
                 <p className="project-summary">{project.summary}</p>
 
                 <div className="project-tags-list">
@@ -161,27 +178,6 @@ export default function Projects({ onSelectProject }: ProjectsProps) {
                       </a>
                     )}
                   </div>
-
-                  <button
-                    className="circle-arrow-btn view-details-trigger"
-                    onClick={() => onSelectProject(project)}
-                    title="View Details &amp; Specs"
-                    aria-label="View Project Details"
-                  >
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <line x1="7" y1="17" x2="17" y2="7"></line>
-                      <polyline points="7 7 17 7 17 17"></polyline>
-                    </svg>
-                  </button>
                 </div>
               </div>
             </article>

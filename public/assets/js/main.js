@@ -273,20 +273,12 @@ function initProjects() {
           `;
         }
 
-        // Circular Arrow Button
-        const circleArrowBtn = `
-          <button class="circle-arrow-btn view-details-trigger" data-project-id="${project.id}" title="View Details & Specs" aria-label="View Project Details">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="7" y1="17" x2="17" y2="7"></line>
-              <polyline points="7 7 17 7 17 17"></polyline>
-            </svg>
-          </button>
-        `;
-
         card.innerHTML = `
-          ${mediaHtml}
+          <div class="view-details-trigger" data-project-id="${project.id}" style="cursor: pointer;" title="Click to view project details">
+            ${mediaHtml}
+          </div>
           <div class="project-body">
-            <h3 class="project-title">${project.title}</h3>
+            <h3 class="project-title view-details-trigger" data-project-id="${project.id}" style="cursor: pointer;" title="Click to view details">${project.title}</h3>
             <p class="project-summary">${project.summary}</p>
             <div class="project-tags-list">
               ${tagsHtml}
@@ -295,7 +287,6 @@ function initProjects() {
               <div class="project-links-group">
                 ${actionsHtml}
               </div>
-              ${circleArrowBtn}
             </div>
           </div>
         `;

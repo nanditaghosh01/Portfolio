@@ -96,7 +96,20 @@ export default function Navbar() {
 
       <header className="site-header" id="siteHeader">
         <div className="container nav-container">
-          <a href="#home" className="brand-logo" aria-label="Nandita Ghosh Home">
+          <a
+            href="#home"
+            className="brand-logo"
+            aria-label="Nandita Ghosh Home"
+            style={{ display: "inline-flex", alignItems: "center", gap: "0.6rem" }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo-n.svg"
+              alt="N Logo"
+              width="30"
+              height="30"
+              style={{ borderRadius: "7px", boxShadow: "0 2px 10px rgba(210, 159, 34, 0.35)" }}
+            />
             <span className="brand-text">Nandita Ghosh</span>
           </a>
 

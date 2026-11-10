@@ -3,29 +3,60 @@ import "./globals.css";
 import "../assets/css/styles.css";
 
 export const metadata: Metadata = {
-  title: "Nandita Ghosh | Computer Science Student & Aspiring Software Engineer",
+  title: "Nandita Ghosh — CSE Student • Web Developer • IoT Builder",
   description:
-    "Portfolio of Nandita Ghosh - Computer Science student and software engineer passionate about modern full-stack web development (React, Next.js, TypeScript, Tailwind CSS), AI/ML, and IoT systems.",
+    "Portfolio of Nandita Ghosh — B.Tech Computer Science student building clean, responsive web applications with Next.js, React, and TypeScript, alongside IoT hardware prototypes.",
   keywords: [
     "Nandita Ghosh",
     "Portfolio",
     "Computer Science",
-    "Software Engineer",
-    "Full-Stack Web Developer",
-    "React.js",
+    "Web Developer",
     "Next.js",
+    "React",
     "TypeScript",
     "Tailwind CSS",
-    "JavaScript",
     "IoT",
     "Robotics",
-    "AI",
-    "Machine Learning"
+    "Adamas University",
   ],
   authors: [{ name: "Nandita Ghosh" }],
   icons: {
-    icon: "/favicon.ico"
-  }
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: "Nandita Ghosh Portfolio",
+    title: "Nandita Ghosh — Developer & Engineer",
+    description:
+      "Nandita Ghosh — CSE student, web developer, and IoT builder at Adamas University.",
+    images: [
+      {
+        url: "/og-square.png",
+        width: 512,
+        height: 512,
+        alt: "Nandita Ghosh 'N' Logo",
+      },
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Nandita Ghosh Portfolio Social Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Nandita Ghosh — Developer & Engineer",
+    description:
+      "Nandita Ghosh — CSE student, web developer, and IoT builder at Adamas University.",
+    images: ["/og-square.png"],
+  },
 };
 
 export default function RootLayout({

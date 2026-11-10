@@ -9,7 +9,20 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="container">
         <div className="footer-top">
-          <a href="#home" className="brand-logo" aria-label="Nandita Ghosh Home">
+          <a
+            href="#home"
+            className="brand-logo"
+            aria-label="Nandita Ghosh Home"
+            style={{ display: "inline-flex", alignItems: "center", gap: "0.6rem" }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo-n.svg"
+              alt="N Logo"
+              width="26"
+              height="26"
+              style={{ borderRadius: "6px", boxShadow: "0 2px 8px rgba(210, 159, 34, 0.35)" }}
+            />
             <span className="brand-text">Nandita Ghosh</span>
           </a>
 
